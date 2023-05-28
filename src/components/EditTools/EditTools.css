@@ -1,0 +1,92 @@
+.edit-tools-container {
+    width: 100%;
+    padding: 8px 16px;
+}
+
+.edit-tools-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 33px;
+    background-color: rgb(var(--edit-tools-background));
+    padding: 5px 8px;
+    height: 100%;
+    gap: 25px;
+}
+
+.edit-tools-section-wrapper {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid grey; */
+    height: 100%;
+}
+
+.edit-tools {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.edit-tool .icon {
+    font-size: 20px;
+    color: rgb(var(--edit-tools-color));
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.edit-tool .text {
+    color: rgb(var(--edit-tools-color));
+    font-weight: 400;
+}
+
+.edit-tool-button {
+    border-radius: 4px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rounded-button {
+    border-radius: 33px;
+}
+
+.edit-tool-button:is(.expand) {
+    padding: 6px 0;
+}
+
+.close-expand-button {
+    gap: 2px;
+}
+
+.edit-tools-section {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.font-size-input {
+    width: 30px;
+    height: 22px;
+    font-size: 12px;
+    padding: 2px;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgb(var(--text-dark));
+}
+
+.more-option {
+    /* position: sticky;
+    right: 0; */
+}
+
+/* Removing default increase and decrease buttons on input with type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* input[type="number"] {
+    -moz-appearance: textfield;
+} */

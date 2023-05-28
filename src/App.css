@@ -1,0 +1,215 @@
+:root {
+    /* Colors */
+    --primary: 194, 231, 255;
+    --primary-dark: 178, 215, 239;
+    --blue: 66, 133, 244;
+    --background: 249, 251, 253;
+    --surface: 255, 255, 255;
+    --tool-surface: 230, 235, 237;
+    --text: 51, 51, 51;
+    --text-dark: 0, 29, 53;
+    --text-disabled: 173, 177, 180;
+    --edit-tools-background: 236, 243, 250;
+    --edit-tools-color: 68, 71, 70;
+
+    /* Screen widths */
+    --xs: 400px;
+    --sm: 600px;
+    --md: 900px;
+    --lg: 1200px;
+}
+
+html {
+    background-color: rgb(var(--background));
+    color: rgb(var(--text));
+}
+
+/* Generic classes */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.inner-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.edit-tools-and-editor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.material-symbols-outlined {
+    display: block;
+}
+
+.brand {
+    width: 36px;
+    height: 36px;
+}
+
+button {
+    cursor: pointer;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.option-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button {
+    padding: 8px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.small-icon-button {
+    padding: 4px !important;
+}
+
+.expand-icon-button {
+    display: flex;
+    border-radius: 33px;
+}
+
+.icon-button .icon {
+    color: rgb(var(--text));
+    font-size: 24px;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    transition: 0.3s ease;
+}
+
+.icon-button:disabled .icon {
+    color: rgb(var(--text-disabled));
+}
+
+.icon-button:disabled {
+    background-color: transparent;
+    cursor: default;
+}
+
+.icon-button .text {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.active-button {
+    background-color: #d3e3fd;
+}
+
+.active-button:hover {
+    background-color: #d3e3fd;
+}
+
+.center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Divider */
+.horizontal-divider {
+    width: 80%;
+    height: 1px;
+    background-color: rgb(var(--text-disabled));
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 80%;
+    background-color: rgb(var(--text-disabled));
+}
+
+/* Tooltip */
+.tooltip-parent {
+}
+.tooltip-wrapper {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.tooltip {
+    position: relative;
+    bottom: -35px;
+    white-space: nowrap;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.tooltip-parent:hover .tooltip-wrapper {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-parent:is(.anchor-right) .tooltip {
+    right: 25%;
+}
+
+.tooltip-parent:is(.anchor-left) .tooltip {
+    left: 50%;
+}
+
+.tooltip-parent:is(.anchor-top) .tooltip {
+    top: -35px;
+}
+
+/* Others */
+::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 12px 12px transparent;
+    border: solid 5px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 12px 12px #dadce0;
+    border: solid 5px transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0 0 12px 12px #8e8d8d;
+}

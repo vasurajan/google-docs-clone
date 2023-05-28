@@ -1,0 +1,60 @@
+.drawer-container {
+    height: 100%;
+}
+
+.drawer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(var(--background));
+    transition: 0.3s ease;
+}
+
+.drawer-opener {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    transition: 0.3s ease;
+}
+
+.drawer-opener .icon-button {
+    display: flex;
+}
+
+.drawer:is(.closed) {
+    display: none;
+    width: 0;
+}
+
+.drawer-opener:is(.closed) {
+    right: -26px;
+}
+
+.drawer-opener:is(.closed):hover {
+    right: -10px;
+}
+
+.drawer-opener:is(.closed) .icon-button {
+    border-radius: 33px;
+    width: 200%;
+    padding-left: 0;
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgba(60, 64, 61, 0.3),
+        0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.drawer-opener:is(.closed):hover .icon-button {
+    padding: 8px;
+    background-color: rgb(var(--tool-surface));
+}
+
+.drawer-opener:is(.closed) .icon {
+    transform: rotate(180deg);
+}
+
+.google-product-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
